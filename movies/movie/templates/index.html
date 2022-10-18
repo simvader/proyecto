@@ -16,6 +16,10 @@
         {% endfor %}
         <br><br>
         <h1>Directores</h1>
+        <hr>
+        {% for director in directors %}
+            {{director.name}} -- {{director.last_name}} <hr>
+        {% endfor %}
         
     </body>
 </html>
