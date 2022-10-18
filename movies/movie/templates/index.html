@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
     <body>
-        Bienvenido a la aplicacion de peliculas 
+        Bienvenido a la aplicacion de peliculas
+        <hr>
+        <h1>Peliculas</h1>
+        <hr>
+        {% for movie in movies %}
+            {{movie.name }} -- {{movie.comment}} <hr>
+        {% endfor %}
+        <br><br>
+        <h1>Directores</h1>
+        
     </body>
 </html>
