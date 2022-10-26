@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Movie, Director
-from .forms import MovieForm
+from .forms import DirectorForm, MovieForm
 # Create your views here.
 
 
@@ -17,10 +17,26 @@ def home(request):
         context
     )
 
-def add(request):
+def add_movie(request):
     form = MovieForm()
+    context = {
+        'titulo': 'Pelicula',
+        'form': form
+    }
     return render(
         request,
         'add.html',
-        {'form': form}
+        context
+    )
+
+def add_director(request):
+    form = DirectorForm()
+    context = {
+        'titulo': 'Director',
+        'form': form
+    }
+    return render(
+        request,
+        'add.html',
+        context
     )
